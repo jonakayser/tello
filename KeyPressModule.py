@@ -25,7 +25,7 @@ def getKeyboardInput(TelloObj):
 
     lr, fb, ud, yv = 0, 0, 0, 0
     speed = 50
-    yaw_speed = 30
+    yaw_speed = 60
 
     if getKey('LEFT'):
         lr = -speed
@@ -43,9 +43,9 @@ def getKeyboardInput(TelloObj):
         ud = -speed
 
     if getKey('a'):
-        yv = yaw_speed
-    elif getKey('d'):
         yv = -yaw_speed
+    elif getKey('d'):
+        yv = yaw_speed
 
     if getKey('q'):
         me.land()
@@ -54,6 +54,9 @@ def getKeyboardInput(TelloObj):
 
     if getKey('b'):
         me.flip('b')
+
+    if getKey('y'):
+        me.emergency()
 
 
     return [lr, fb, ud, yv]

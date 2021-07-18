@@ -1,6 +1,5 @@
 import cv2
 
-def
 cascPath = "Resources/haarcascade_frontalface_default.xml"
 faceCascade = cv2.CascadeClassifier(cascPath)
 

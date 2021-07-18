@@ -11,12 +11,18 @@ print(me.get_battery())
 # --------------------- above is boiler plate ------------------
 
 # take-off
+print("Take-off")
 me.takeoff()
+sleep(5)
 
 # fly a pattern
-me.send_rc_control(0, 20, 0, 0)
-sleep(1)
+speed = 15
+for wp in range(4):
+    me.go_xyz_speed(30,30,0,speed)
+    me.rotate_clockwise(90)
+    print('waypoint:{}'.format(wp+1))
+
+
 
 # land
-me.send_rc_control(0, 0, 0, 0)
 me.land()
