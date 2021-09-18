@@ -1,5 +1,5 @@
 import djitellopy as tello
-import KeyPressModule as kp
+from Sandbox import KeyPressModule as kp
 
 import time
 

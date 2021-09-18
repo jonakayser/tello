@@ -1,4 +1,4 @@
-import KeyPressModule as kp
+from Sandbox import KeyPressModule as kp
 from djitellopy import tello
 from time import sleep
 

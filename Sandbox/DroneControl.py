@@ -1,8 +1,7 @@
-import KeyPressModule as kp
+from Sandbox import KeyPressModule as kp
 import cv2
 from djitellopy import tello
 import numpy as np
-import time
 
 # instantiate and connect tello drone
 me = tello.Tello()
